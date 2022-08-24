@@ -1,3 +1,11 @@
-<p>{{ todo.text | uppercase }}!</p>
-
-<input id="name" [(ngModel)]="todo.text" placeholder="name" />
+<div class="container">
+  <h2>Todo List</h2>
+  <div
+    class="item"
+    *ngFor="let todo of todos"
+    (click)="onSelect(todo)"
+    [class.completed]="todo.checked"
+  >
+    <p>{{ todo.text }}</p>
+  </div>
+</div>
