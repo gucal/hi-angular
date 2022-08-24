@@ -9,13 +9,13 @@
 .item {
   cursor: pointer;
   width: 100%;
-  padding: 1rem;
+  padding: 0.25rem 1rem;
   border-radius: 0.5rem;
   background-color: red;
   color: #f9f9f9;
 }
 
 .completed {
-  background-color: greenyellow;
-  color: #000;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 0.2rem;
 }
