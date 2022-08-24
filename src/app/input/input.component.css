@@ -1,5 +1,5 @@
 textarea {
-  width: 100%;
+  flex: 6;
   padding: 0.5rem;
   border-width: 0.5px;
   border-radius: 0.5rem;
@@ -7,7 +7,20 @@ textarea {
   resize: vertical;
 }
 
+button {
+  background-color: #ff3938;
+  color: #fff;
+  flex: 1;
+  cursor: pointer;
+  border: 0;
+  border-radius: 1rem;
+  outline: none;
+  padding: 0 2rem;
+  font-size: 1rem;
+}
+
 .wrapper {
   width: 100%;
   display: flex;
+  gap: 1rem;
 }

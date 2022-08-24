@@ -3,11 +3,13 @@
   <div
     class="item"
     *ngFor="let todo of todos"
-    (click)="onSelect(todo)"
+    (click)="onCompleted(todo.id)"
     [class.completed]="todo.checked"
   >
     <p>{{ todo.text }}</p>
   </div>
 
-  <app-input [todos]="todos"></app-input>
+  <div class="w-full">
+    <app-input [todos]="todos"></app-input>
+  </div>
 </div>

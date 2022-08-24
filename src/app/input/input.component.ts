@@ -11,15 +11,14 @@ export class InputComponent implements OnInit {
 
   @Input() todos?: Todo[];
   value?: string;
-  isError?: boolean;
 
   addTodo(): void {
     if (!this.value?.trim()) {
-      this.isError = true;
+      alert('invalid!');
       return;
     }
     this.todos?.push({
-      id: this.todos.length,
+      id: this.todos.length + 1,
       text: this.value || '',
       checked: false,
     });

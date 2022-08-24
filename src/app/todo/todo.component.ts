@@ -27,10 +27,14 @@ export class TodoComponent implements OnInit {
     },
   ];
 
-  selectedTodo?: Todo;
-
-  onSelect(selectTodo: Todo): void {
-    this.selectedTodo = selectTodo;
+  onCompleted(selectTodoID: number): void {
+    const currentIndex = this.todos.findIndex(
+      (todo) => todo.id === selectTodoID
+    );
+    this.todos[currentIndex] = {
+      ...this.todos[currentIndex],
+      checked: !this.todos[currentIndex].checked,
+    };
   }
 
   ngOnInit(): void {}
