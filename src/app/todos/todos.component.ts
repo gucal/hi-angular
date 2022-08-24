@@ -1,31 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from './todo';
+import { Todo } from './todos';
 
 @Component({
   selector: 'app-todo',
-  templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css'],
+  templateUrl: './todos.component.html',
+  styleUrls: ['./todos.component.css'],
 })
 export class TodoComponent implements OnInit {
   constructor() {}
 
-  todos: Todo[] = [
-    {
-      id: 1,
-      text: 'Angular ogren',
-      checked: false,
-    },
-    {
-      id: 2,
-      text: 'Angular todo ekle',
-      checked: false,
-    },
-    {
-      id: 3,
-      text: 'Angular todo sil',
-      checked: true,
-    },
-  ];
+  todos: Todo[] = [];
 
   onCompleted(selectTodoID: number): void {
     const currentIndex = this.todos.findIndex(

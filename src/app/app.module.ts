@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TodoComponent } from './todo/todo.component';
+import { TodoComponent } from './todos/todos.component';
 import { InputComponent } from './input/input.component';
 
 @NgModule({
